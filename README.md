@@ -1,9 +1,9 @@
 <p>
   <a href="https://tailwindcss.com/#gh-light-mode-only" target="_blank">
-    <img src="./.github/logo-light.svg" alt="Tailwind CSS" width="350" height="70">
+    <img src="./.github/img/logo-light.svg" alt="Tailwind CSS" width="350" height="70">
   </a>
   <a href="https://tailwindcss.com/#gh-dark-mode-only" target="_blank">
-    <img src="./.github/logo-dark.svg" alt="Tailwind CSS" width="350" height="70">
+    <img src="./.github/img/logo-dark.svg" alt="Tailwind CSS" width="350" height="70">
   </a>
 </p>
 
