@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+.header-one {
+    @apply text-3xl font-bold pt-8 lg:pt-0;
+}
+
+.simple-icon {
+    @apply h-6 fill-current text-sandTanDark hover:text-nightBlue hover:animate-spin;
+}
+
+.badge {
+    @apply px-4 py-2 text-sm rounded bg-sandTan;
+}
+
+.navbar-option {
+    @apply text-white font-bold md:text-lg sm:text-sm w-full no-underline sm:w-auto sm:px-4 py-2 sm:py-1 sm:pt-2 hover:text-sandTan;
+}
+
+.website-box {
+    @apply max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0;
+}
+
+.website-box-padding {
+    @apply p-4 md:p-12 text-center lg:text-left;
+}
+
+.website-box-header-underline {
+    @apply mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-sandTanDark;
+}
+
+.website-box-paragraph {
+    @apply pt-8 text-sm;
+}
+
+.website-box-main-col {
+    @apply w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-sandTanShadow mx-6 lg:mx-0;
+}
+
+.website-box-image-col {
+    @apply rounded-none lg:rounded-lg shadow-2xl hidden lg:block;
+}
+
+.website-box-image-size {
+    @apply w-full lg:w-2/5;
+}
+
+.website-box-mobile-image {
+    @apply block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover;
+}
+
+.website-box-bottom-padding {
+    @apply mt-6 pb-4 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between;
+}
+
+.window-box-badge-wrap {
+    @apply w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8;
+}
+
+.website-company-box {
+    @apply max-w-4xl flex items-center h-auto flex-wrap mx-auto my-32 lg:my-0;
+}
+
+.education-button {
+    @apply bg-sandTanDark hover:bg-nightBlue font-bold py-2 px-4 rounded-full text-sm;
+}
+
+.education-button-big {
+    @apply bg-sandTanDark hover:bg-nightBlue font-bold py-2 px-4 rounded-full md:text-sm text-xs;
+}
+
+.friend-picture {
+    @apply w-full h-36 lg:h-72 object-cover;
+}
+
+[id] {
+    scroll-margin-top: 130px;
+}
+
+/* HAMBURGER MENU */
+
+.hamburger {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  transition: all 0.25s;
+}
+
+.hamburger__top-bun,
+.hamburger__bottom-bun {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger:hover [class*="-bun"] {
+  background: #333;
+}
+
+.hamburger__top-bun {
+  transform: translateY(-5px);
+}
+
+.hamburger__bottom-bun {
+  transform: translateY(3px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(-1px);
+}
+
+.open .hamburger__top-bun {
+  transform:
+    rotate(45deg)
+    translateY(0px);
+}
+
+.open .hamburger__bottom-bun {
+  transform:
+    rotate(-45deg)
+    translateY(0px);
+}
