@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://parhuam-jalalian.github.io/Personal-Portfolio",
+  "homepage": "https://parhuam.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
