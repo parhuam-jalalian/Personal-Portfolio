@@ -1,0 +1,36 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+        
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build
+        run: npm run build
+        
+      - name: Configure MIME types
+        run: |
+          find dist -type f -name '*.js' -exec bash -c "echo 'application/javascript; charset=utf-8' >> {}" \;
+          find dist -type f -name '*.css' -exec bash -c "echo 'text/css; charset=utf-8' >> {}" \;
+          find dist -type f -name '*.json' -exec bash -c "echo 'application/json; charset=utf-8' >> {}" \;
+        
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./dist
