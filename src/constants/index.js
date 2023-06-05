@@ -13,9 +13,7 @@ import {
     C_1,
     C_2,
     C_3,
-    sql,
     threejs,
-    git,
     python3,
 
     msa,
@@ -39,6 +37,10 @@ import {
     {
       id: "work",
       title: "Work",
+    },
+    {
+      id: "project",
+      title: "Projects",
     },
     {
       id: "contact",
