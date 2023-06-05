@@ -23,7 +23,7 @@ const LegendaryChest = ({ isMobile }) => {
             <primitive
                 object={LegendaryChest.scene}
                 scale={isMobile ? 0.025 : 0.045}
-                position={isMobile ? [-.1, -2.0, 0.05] : [-.5, -2.1, 0.05]}
+                position={isMobile ? [-.1, -1.5, 0.05] : [-.5, -2.1, 0.05]}
                 rotation={[-0.01, 1.4, 0]}
             />
         </mesh>
@@ -61,13 +61,12 @@ const LegendaryChestCanvas = () => {
             frameloop="demand"
             shadows
             dpr={[1, 2]}
-            camera={{ position: [20, 3, 5], fov: 25 }}
+            camera={{ position: [20, 3, 5], fov: 30 }}
             gl={{ preserveDrawingBuffer: true }}
         >
             <Suspense fallback={<CanvasLoader />}>
                 <OrbitControls
                     enableZoom={false}
-                    enableRotate={false}
                     maxPolarAngle={Math.PI / 2}
                     minPolarAngle={Math.PI / 2}
                     autoRotate={true}
