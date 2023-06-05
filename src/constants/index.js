@@ -16,15 +16,19 @@ import {
     sql,
     threejs,
     git,
-    dart,
+    python3,
 
     msa,
     xenia,
     chargepoint,
 
+    three_project,
     rolli_polli,
     game_project,
     my_website,
+
+    justin_liu,
+
   } from "../assets";
   
   export const navLinks = [
@@ -94,17 +98,10 @@ import {
       name: "Three JS",
       icon: threejs,
     },
+
     {
-      name: "git",
-      icon: git,
-    },
-    {
-      name: "SQL",
-      icon: sql,
-    },
-    {
-      name: "dart",
-      icon: dart,
+      name: "python3",
+      icon: python3,
     },
     {
       name: "C",
@@ -164,31 +161,28 @@ import {
   const testimonials = [
     {
       testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
+        "Parhuam has a natural feel and deep user empathy for building great UXs and beautiful UIs.",
+      name: "Justin Liu",
+      designation: "CEO",
+      company: "Xenia Gifts",
+      image: justin_liu,
     },
   ];
   
   const projects = [
+    {
+        name: "Capstone Senior Project",
+        description:
+          "I developed my first-person exploration application using Three.js, a powerful JavaScript 3D library. This project was created as part of my final assignment for Introduction to Computer Graphics at UCSC. It showcases a range of features, including: Perlin Terrain Generation, Cannon.js Physics Engine, Atmospheric effects, and much more!",
+        tags: [
+          {
+            name: "ThreeJS",
+            color: "pink-text-gradient",
+          },
+        ],
+        image: three_project,
+        source_code_link: "https://people.ucsc.edu/~pfjalali/Assignment_5/",
+      },
     {
       name: "Rolli Polli",
       description:

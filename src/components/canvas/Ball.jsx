@@ -9,6 +9,8 @@ import {
 } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
+import { EffectComposer, Bloom} from '@react-three/postprocessing';
+
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
@@ -50,6 +52,9 @@ const BallCanvas = ({ icon }) => {
       </Suspense>
 
       <Preload all />
+      <EffectComposer>
+            <Bloom luminanceThreshold={0} luminanceSmoothing={0.2} intensity={0.5} radius={1} />
+            </EffectComposer>
     </Canvas>
   );
 };

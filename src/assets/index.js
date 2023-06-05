@@ -10,7 +10,7 @@ import close from "./close.svg";
 
 // Tech
 import css from "./tech/css.png";
-import dart from "./tech/dart.png";
+import python3 from "./tech/python3.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
@@ -33,6 +33,13 @@ import xenia from "./company/xenia.png";
 import rolli_polli from "./rolli_polli.png";
 import game_project from "./game_project.png";
 import my_website from "./my_website.png";
+import three_project from "./three_project.png";
+
+// Pdfs
+import resume from "./Parhuam_Jalalian_Resume.pdf";
+
+// Testimonials
+import justin_liu from "./justin_liu.png";
 
 export {
   logo,
@@ -48,7 +55,7 @@ export {
   C_2,
   C_3,
   sql,
-  dart,
+  python3,
   git,
   html,
   javascript,
@@ -60,7 +67,10 @@ export {
   chargepoint,
   msa,
   xenia,
+  three_project,
   rolli_polli,
   game_project,
   my_website,
+  justin_liu,
+  resume,
 };
