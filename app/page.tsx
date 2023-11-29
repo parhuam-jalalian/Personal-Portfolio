@@ -1,10 +1,14 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+import Navbar from "@/components/Layout/Navbar/Navbar";
 
 const page = () => {
   return (
     <div>
-      <Button>Click me</Button>
+      <Navbar />
+      <br />
+      <br />
+      <br />
+      {/* lorem4000 */}
     </div>
   );
 };
