@@ -83,10 +83,6 @@
 }
 
 @layer components {
-  .gradient-text {
-    @apply bg-gradient-primary bg-clip-text text-transparent;
-  }
-
   .title-bottom-line {
     @apply relative mb-7 inline-block border-b-2 border-dashed border-muted-foreground text-xl font-bold text-foreground no-underline after:absolute after:-bottom-[3px] after:left-0 after:h-1 after:w-0 after:bg-gradient-to-r after:from-blue-500 after:to-teal-500 after:transition-all after:duration-300 group-hover:after:w-full xs:text-2xl;
   }
