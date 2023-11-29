@@ -6,13 +6,14 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="flex items-center justify-between">
-      <div className="">
-        <h2 className="gradient-text text-4xl line-line-height-4 my-2 font-bold xs:mt-4 xs:text-4xl sm:mt-5">
-          Senior <br /> Frontend Developer
+    <div className="flex items-center justify-between gap-4 flex-col md:flex-row">
+      <div className="mb-2">
+        <h2 className="gradient-text text-3xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl my-2 font-bold">
+          Senior Frontend Developer
         </h2>
-        <p className="text-xl text-muted-foreground mb-5">Istiaque Alam Joy</p>
-        <div className="flex gap-0">
+        <p className="text-2xl text-muted-foreground mb-5">Istiaque Alam Joy</p>
+        {/* icons */}
+        <div className="flex gap-1">
           <Link href="/">
             <Button variant="ghost" size="icon">
               <LuGithub className="h-6 w-6" />
@@ -33,7 +34,7 @@ const Hero = () => {
       <Image
         width={1000}
         height={1000}
-        className="h-[450px] w-[450px] object-cover rounded-xl hidden md:flex"
+        className="h-[450px] w-[420px] object-cover rounded-xl object-center"
         src="/profile-picture-joyshaheb.png"
         alt=""
       />
