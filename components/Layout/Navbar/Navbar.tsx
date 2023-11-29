@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import NavItems from "./NavItems";
 import { RxMoon } from "react-icons/rx";
+import MobileSideBar from "./MobileSideBar";
 
 const Navbar = () => {
   return (
@@ -13,8 +14,8 @@ const Navbar = () => {
               <RxMoon className="w-6 h-6" />
             </Button>
             <div className="block xs:hidden">
-              {/* <DropdownMenu /> */}
               {/* mobile menu option */}
+              <MobileSideBar />
             </div>
           </nav>
         </div>
