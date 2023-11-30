@@ -1,8 +1,17 @@
-import React, { Fragment } from "react";
-import { techStackIcons } from "./TechStackIcons";
+import React from "react";
 import Image from "next/image";
+import { ITechStackOptionProp } from "@/types/interface";
+import TooltipComponent from "../Tooltip/TooltipComponent";
 
-const About = () => {
+const About = ({
+  about,
+  tech,
+}: {
+  about: any;
+  tech: ITechStackOptionProp[];
+}) => {
+  // const serializedTech = tech?.map((item) => {});
+
   return (
     <section id="about" className="pt-20 text-muted-foreground sm:text-lg">
       {/* about me */}
@@ -18,16 +27,22 @@ const About = () => {
 
       {/* techs I used */}
       <div className="group">
-        <h1 className="title-bottom-line mt-14 cursor-pointer">Techs I used</h1>
+        <h1 className="title-bottom-line mt-14 cursor-pointer">Tech Stack</h1>
 
         <div className="flex flex-wrap gap-2">
-          {techStackIcons.map((icon) => (
-            <Image
-              width={45}
-              key={icon?.id}
-              height={45}
-              src={icon?.icon}
-              alt=""
+          {tech.map((item) => (
+            <TooltipComponent
+              key={item?._id}
+              label={item?.title}
+              item={
+                <Image
+                  className="cursor-pointer"
+                  width={45}
+                  height={45}
+                  src={item?.mainImage}
+                  alt={item?.title}
+                />
+              }
             />
           ))}
         </div>
