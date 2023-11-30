@@ -1,4 +1,6 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { techStackIcons } from "./TechStackIcons";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -19,12 +21,15 @@ const About = () => {
         <h1 className="title-bottom-line mt-14 cursor-pointer">Techs I used</h1>
 
         <div className="flex flex-wrap gap-2">
-          {/* {siteConfig.skillIcons.map((icon, idx) => (
-            <Fragment key={idx}>
-              <icon.Icon key={idx} className="h-11 w-11" />
-              <span className="sr-only">{icon.title}</span>
-            </Fragment>
-          ))} */}
+          {techStackIcons.map((icon) => (
+            <Image
+              width={45}
+              key={icon?.id}
+              height={45}
+              src={icon?.icon}
+              alt=""
+            />
+          ))}
         </div>
       </div>
     </section>
