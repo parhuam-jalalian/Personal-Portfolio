@@ -14,7 +14,7 @@ const page = async () => {
   const data: IDataProps = await sanityClientFetch({
     query: dataQuery,
   });
-  console.log(data);
+  console.log(data?.heroSection);
   return (
     <div>
       <Navbar />

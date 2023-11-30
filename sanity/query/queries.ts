@@ -3,7 +3,8 @@ import { groq } from "next-sanity";
 export const dataQuery = groq`{
   "heroSection": *[_type == "hero"][0]{
     ...,
-    "mainImage": mainImage.asset->url
+    "mainImage": mainImage.asset->url,
+    "resume": resume.asset->url
   },
   "aboutSection": *[_type == "about"]{
     ...,

@@ -11,6 +11,7 @@ const Hero = ({
   mainImage,
   name,
   title,
+  resume,
 }: IHeroSectionProps) => {
   return (
     <div className="flex items-center justify-between gap-4 flex-col md:flex-row">
@@ -45,9 +46,14 @@ const Hero = ({
             </Link>
           )}
         </div>
-        <Button variant="default" size="sm" className="mt-3">
-          View Resume
-        </Button>
+
+        {resume && (
+          <Link href={resume} target="_blank">
+            <Button variant="default" size="sm" className="mt-3">
+              View Resume
+            </Button>
+          </Link>
+        )}
       </div>
 
       {mainImage && (

@@ -12,6 +12,12 @@ export default defineType({
       description: "Your Job Title",
     }),
     defineField({
+      name: "resume",
+      title: "resume",
+      type: "file",
+      description: "Upload your resume",
+    }),
+    defineField({
       name: "name",
       title: "Name",
       type: "string",

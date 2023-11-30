@@ -15,6 +15,7 @@ export interface IHeroSectionProps {
   github: string;
   linkedin: string;
   email: string;
+  resume: string;
 }
 
 export interface ITechStackOptionProp {
