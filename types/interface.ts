@@ -7,6 +7,16 @@ export interface INavbarOptions {
   path: string;
 }
 
+export interface IHeroSectionProps {
+  title: string;
+  name: string;
+  mainImage: string;
+  _id: string;
+  github: string;
+  linkedin: string;
+  email: string;
+}
+
 export interface ITechStackOptionProp {
   title: string;
   mainImage: string;
