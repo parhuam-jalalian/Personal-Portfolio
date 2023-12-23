@@ -31,7 +31,7 @@ const Hero = ({
           )}
 
           {linkedin && (
-            <Link href={linkedin}>
+            <Link href={linkedin} target="_blank">
               <Button variant="ghost" size="icon">
                 <LuLinkedin className="h-6 w-6" />
               </Button>

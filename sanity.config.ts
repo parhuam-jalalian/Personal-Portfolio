@@ -1,25 +1,42 @@
-/**
- * This configuration is used to for the Sanity Studio that’s mounted on the `\app\studio\[[...index]]\page.tsx` route
- */
+import { visionTool } from "@sanity/vision";
+import { defineConfig } from "sanity";
+import { deskTool } from "sanity/desk";
 
-import {visionTool} from '@sanity/vision'
-import {defineConfig} from 'sanity'
-import {deskTool} from 'sanity/desk'
-
-// Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
-import {apiVersion, dataset, projectId} from './sanity/env'
-import {schema} from './sanity/schema'
+import { apiVersion, dataset, projectId } from "./sanity/env";
+import { schema } from "./sanity/schema";
 
 export default defineConfig({
-  basePath: '/studio',
+  basePath: "/studio",
   projectId,
   dataset,
-  // Add and edit the content schema in the './sanity/schema' folder
   schema,
   plugins: [
-    deskTool(),
-    // Vision is a tool that lets you query your content with GROQ in the studio
-    // https://www.sanity.io/docs/the-vision-plugin
-    visionTool({defaultApiVersion: apiVersion}),
+    deskTool({
+      structure: (S, context) => {
+        return S.list()
+          .title("Content Menu")
+          .items([
+            S.listItem()
+              .title("Hero Section")
+              .child(S.document().schemaType("hero").documentId("hero")),
+            S.listItem()
+              .title("About Section")
+              .child(S.document().schemaType("about").documentId("about")),
+            S.listItem()
+              .title("Tech Section")
+              .child(S.document().schemaType("tech").documentId("tech")),
+            ...S.documentTypeListItems().filter(
+              (listItem) =>
+                !["hero", "about", "tech"].includes(listItem.getId() as string)
+            ),
+          ]);
+      },
+    }),
+    visionTool({ defaultApiVersion: apiVersion }),
   ],
-})
+});
+
+// https://www.linkedin.com/in/joyshaheb/
+// khondokoralam@gmail.com
+// https://github.com/JoyShaheb
+// Senior Frontend Developer

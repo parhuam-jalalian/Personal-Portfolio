@@ -6,11 +6,15 @@ export const dataQuery = groq`{
     "mainImage": mainImage.asset->url,
     "resume": resume.asset->url
   },
-  "aboutSection": *[_type == "about"]{
+  "aboutSection": *[_type == "about"][0]{
     ...,
     "mainImage": mainImage.asset->url
   },
-  "techSection": *[_type == "tech"]{
+  "projects": *[_type == "projects"]{
+    ...,
+    "mainImage": mainImage.asset->url
+  },
+  "techSection": *[_type == "tech"][0]{
     ...,
     "mainImage": mainImage.asset->url
   }

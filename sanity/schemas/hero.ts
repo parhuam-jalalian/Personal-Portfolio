@@ -31,6 +31,7 @@ export default defineType({
       options: {
         hotspot: true,
       },
+      // @ts-ignore
       fields: [
         {
           name: "alt",
@@ -58,19 +59,4 @@ export default defineType({
       description: "Add your email here",
     }),
   ],
-
-  preview: {
-    select: {
-      title: "title",
-      author: "author.name",
-      media: "mainImage",
-    },
-    prepare(selection) {
-      const { author } = selection;
-      return {
-        ...selection,
-        subtitle: author && `by ${author}`,
-      };
-    },
-  },
 });

@@ -4,21 +4,21 @@ export const NavOptions: INavbarOptions[] = [
   {
     id: 1,
     label: "About",
-    path: "/",
+    path: "#about",
   },
   {
     id: 2,
     label: "Experience",
-    path: "/",
+    path: "#experience",
   },
   {
     id: 3,
     label: "Portfolio",
-    path: "/",
+    path: "#portfolio",
   },
   {
     id: 4,
     label: "Contact",
-    path: "/",
+    path: "#contact",
   },
 ];
