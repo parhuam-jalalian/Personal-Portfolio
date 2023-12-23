@@ -10,7 +10,7 @@ import { IHeroSectionProps, ITechStackOptionProp } from "@/types/interface";
 interface IDataProps {
   heroSection: IHeroSectionProps;
   aboutSection: any[];
-  techSection: ITechStackOptionProp[];
+  techSection: ITechStackOptionProp;
   projects: any[];
 }
 
@@ -24,7 +24,10 @@ const page = async () => {
       <Navbar />
       <main className="container mx-auto max-w-5xl mt-10 pt-16">
         <Hero {...data?.heroSection} />
-        <About about={data?.aboutSection} tech={data?.techSection} />
+        <About
+          about={data?.aboutSection}
+          tech={data?.techSection?.technologies}
+        />
         <Experience />
         <Portfolio projects={data?.projects} />
         <Contact />

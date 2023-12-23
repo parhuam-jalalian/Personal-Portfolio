@@ -1,5 +1,15 @@
 import { TechStackEnum } from "./enum";
 
+export interface ICommonProps {
+  _type: string;
+  _id: string;
+  _rev: string;
+  _updatedAt: string;
+  _createdAt: string;
+  name: string;
+  image: string;
+}
+
 export interface INavbarOptions {
   id: number;
   label: string;
@@ -18,10 +28,13 @@ export interface IHeroSectionProps {
   resume: string;
 }
 
-export interface ITechStackOptionProp {
-  title: string;
-  mainImage: string;
+export interface ITechStackSingleItem {
   stack: TechStackEnum.FRONTEND | TechStackEnum.BACKEND | TechStackEnum.DEVOPS;
-  _id: string;
-  serial: number;
+  icon: string;
+  label: string;
+  _key: string;
+}
+
+export interface ITechStackOptionProp extends ICommonProps {
+  technologies: ITechStackSingleItem[];
 }

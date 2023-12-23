@@ -16,6 +16,9 @@ export const dataQuery = groq`{
   },
   "techSection": *[_type == "tech"][0]{
     ...,
-    "mainImage": mainImage.asset->url
+    technologies[] {
+      ...,
+      "icon": icon.asset->url
+    }  
   }
 }`;

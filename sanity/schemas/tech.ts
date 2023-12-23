@@ -63,6 +63,24 @@ export default defineType({
               ],
             },
           ],
+          preview: {
+            select: {
+              title: "label",
+              stack: "stack",
+              media: "icon",
+            },
+            prepare(selection: any) {
+              const { title, stack, media } = selection;
+              return {
+                title: title,
+                media: media,
+
+                subtitle:
+                  stack &&
+                  `Stack: ${stack.charAt(0).toUpperCase() + stack.slice(1)}`,
+              };
+            },
+          },
         },
       ],
     }),

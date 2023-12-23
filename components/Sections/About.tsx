@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { ITechStackOptionProp } from "@/types/interface";
+import { ITechStackSingleItem } from "@/types/interface";
 import TooltipComponent from "../Tooltip/TooltipComponent";
 
 const About = ({
@@ -8,10 +8,8 @@ const About = ({
   tech,
 }: {
   about: any;
-  tech: ITechStackOptionProp[];
+  tech: ITechStackSingleItem[];
 }) => {
-  // const serializedTech = tech?.map((item) => {});
-
   return (
     <section id="about" className="pt-20 text-muted-foreground sm:text-lg">
       {/* about me */}
@@ -30,17 +28,17 @@ const About = ({
         <h1 className="title-bottom-line mt-14 cursor-pointer">Tech Stack</h1>
 
         <div className="flex flex-wrap gap-2">
-          {tech.map((item) => (
+          {tech.map((item: ITechStackSingleItem) => (
             <TooltipComponent
-              key={item?._id}
-              label={item?.title}
+              key={item?._key}
+              label={item?.label}
               item={
                 <Image
                   className="cursor-pointer"
                   width={45}
                   height={45}
-                  src={item?.mainImage}
-                  alt={item?.title}
+                  src={item?.icon}
+                  alt={item?.label}
                 />
               }
             />
