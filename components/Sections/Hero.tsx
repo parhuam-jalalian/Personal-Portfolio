@@ -14,7 +14,10 @@ const Hero = ({
   resume,
 }: IHeroSectionProps) => {
   return (
-    <div className="flex items-center justify-between gap-4 flex-col md:flex-row">
+    <section
+      id="home"
+      className="flex items-center justify-between gap-4 flex-col md:flex-row"
+    >
       <div className="mb-2">
         <h2 className="gradient-text text-3xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl my-2 font-bold">
           {title}
@@ -65,7 +68,7 @@ const Hero = ({
           alt=""
         />
       )}
-    </div>
+    </section>
   );
 };
 

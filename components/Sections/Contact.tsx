@@ -1,8 +1,6 @@
-import React from "react";
-
-export const Contact = () => {
+const Contact = () => {
   return (
-    <section id="#contact" className="pt-20 text-muted-foreground sm:text-lg">
+    <section id="contact" className="pt-20 text-muted-foreground sm:text-lg">
       <div className="group">
         <h1 className="title-bottom-line cursor-pointer">Contact</h1>
         <p>
@@ -15,3 +13,4 @@ export const Contact = () => {
     </section>
   );
 };
+export default Contact;
