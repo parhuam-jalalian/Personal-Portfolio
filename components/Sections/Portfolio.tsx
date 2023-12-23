@@ -6,7 +6,6 @@ const Portfolio = ({ projects }: { projects: any[] }) => {
       <div className="group">
         <h1 className="title-bottom-line cursor-pointer">Portfolio</h1>
         <p>
-          sdcjbds
           {/* {projects?.map((item) => (
             <div key={item?._id} className="">
               
