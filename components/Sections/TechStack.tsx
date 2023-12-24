@@ -67,7 +67,7 @@ const TechStack = ({ tech }: { tech: ITechStackSingleItem[] }) => {
       {devops?.length > 0 && (
         <div className="flex flex-col gap-3">
           <br />
-          <h1 className="text-lg uppercase">devops</h1>
+          <h1 className="text-lg uppercase">devops & others</h1>
           <div className="flex flex-wrap gap-2">
             {devops.map((item: ITechStackSingleItem) => (
               <TooltipComponent
