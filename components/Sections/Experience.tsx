@@ -1,4 +1,5 @@
 import React from "react";
+import TimelineCard from "../Card/TimelineCard";
 
 const Experience = () => {
   return (
@@ -7,12 +8,13 @@ const Experience = () => {
         <h1 className="title-bottom-line cursor-pointer text-2xl">
           Experience
         </h1>
-        <p>
-          Joy is an experienced Senior Frontend Developer and mentor based in
-          Dhaka, Bangladesh. He is highly enthusiastic about Typescript and
-          genuinely enjoys teaching web dev to others. He is currently on a
-          mission to create the best web dev tutorials on the internet.
-        </p>
+        <div className="">
+          <ol className="relative border-s border-gray-200 dark:border-gray-700">
+            <TimelineCard />
+            <TimelineCard />
+            <TimelineCard />
+          </ol>
+        </div>
       </div>
     </section>
   );
