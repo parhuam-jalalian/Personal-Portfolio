@@ -21,7 +21,7 @@ const TechStack = ({ tech }: { tech: ITechStackSingleItem[] }) => {
       </h1>
 
       {frontend?.length > 0 && (
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 mb-4">
           <h1 className="text-lg uppercase">Frontend</h1>
           <div className="flex flex-wrap gap-2">
             {frontend.map((item: ITechStackSingleItem) => (
@@ -40,7 +40,6 @@ const TechStack = ({ tech }: { tech: ITechStackSingleItem[] }) => {
               />
             ))}
           </div>
-          <br />
         </div>
       )}
 
@@ -67,8 +66,7 @@ const TechStack = ({ tech }: { tech: ITechStackSingleItem[] }) => {
         </div>
       )}
       {devops?.length > 0 && (
-        <div className="flex flex-col gap-3">
-          <br />
+        <div className="flex flex-col gap-3 mt-4">
           <h1 className="text-lg uppercase">devops & others</h1>
           <div className="flex flex-wrap gap-2">
             {devops.map((item: ITechStackSingleItem) => (
