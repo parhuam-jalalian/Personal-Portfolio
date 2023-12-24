@@ -38,3 +38,11 @@ export interface ITechStackSingleItem {
 export interface ITechStackOptionProp extends ICommonProps {
   technologies: ITechStackSingleItem[];
 }
+
+export interface IProjectData extends ICommonProps {
+  mainImage: string;
+  title: string;
+  description: string;
+  github: string;
+  deployment: string;
+}
