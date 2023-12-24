@@ -16,7 +16,9 @@ const TechStack = ({ tech }: { tech: ITechStackSingleItem[] }) => {
 
   return (
     <section id="#about" className="group">
-      <h1 className="title-bottom-line mt-14 cursor-pointer">Tech Stack</h1>
+      <h1 className="title-bottom-line mt-14 cursor-pointer text-2xl">
+        Tech Stack
+      </h1>
 
       {frontend?.length > 0 && (
         <div className="flex flex-col gap-3">

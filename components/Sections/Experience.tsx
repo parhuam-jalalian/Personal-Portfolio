@@ -4,7 +4,9 @@ const Experience = () => {
   return (
     <section id="experience" className="pt-20 text-muted-foreground sm:text-lg">
       <div className="group">
-        <h1 className="title-bottom-line cursor-pointer">Experience</h1>
+        <h1 className="title-bottom-line cursor-pointer text-2xl">
+          Experience
+        </h1>
         <p>
           Joy is an experienced Senior Frontend Developer and mentor based in
           Dhaka, Bangladesh. He is highly enthusiastic about Typescript and

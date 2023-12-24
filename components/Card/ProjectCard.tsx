@@ -1,66 +1,62 @@
-import Image from "next/image";
-import Link from "next/link";
-import { buttonVariants } from "../ui/button";
+import * as React from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { IProjectData } from "@/types/interface";
+import Image from "next/image";
+import { LuGithub, LuArrowUpRight } from "react-icons/lu";
+import Link from "next/link";
 
-import { GithubIcon, ArrowUpRightIcon } from "lucide-react";
-
-export default function ProjectCard({
-  mainImage,
-  title,
+const ProjectCard: React.FC<IProjectData> = ({
+  deployment,
   description,
   github,
-  deployment,
-}: IProjectData) {
+  mainImage,
+  title,
+}) => {
   return (
-    <div className="group/card w-full max-w-[400px] overflow-hidden">
-      <Link target="_blank" rel="noreferrer" href={deployment}>
-        <Image
-          src={mainImage}
-          alt={title}
-          width={400}
-          height={400}
-          priority
-          className="transition-all duration-500 hover:scale-[.99] hover:opacity-80"
-        />
-      </Link>
-
-      <div className="p-2 pt-[2px]">
-        <div className="flex w-full items-center justify-between">
-          <Link
-            target="_blank"
-            rel="noreferrer"
-            href={deployment}
-            className="link-hover text-base font-bold text-primary sm:text-lg"
-          >
-            {title}
-          </Link>
-
-          <div>
-            <Link
-              target="_blank"
-              rel="noreferrer"
-              href={github}
-              className={buttonVariants({ variant: "ghost", size: "sm" })}
+    <Card className="cursor-pointer">
+      <Image
+        src={mainImage}
+        alt="alt text"
+        width={400}
+        height={400}
+        className="w-full h-[200px] object-cover rounded-t-md"
+      />
+      <CardHeader className="px-4 py-2">
+        <CardTitle className="text-md">{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
+        <div className="">
+          {github && (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-muted-foreground px-2 py-0"
             >
-              <GithubIcon />
-              <span className="sr-only">GitHub</span>
-            </Link>
-
-            <Link
-              target="_blank"
-              rel="noreferrer"
-              href={deployment}
-              className={buttonVariants({ variant: "ghost", size: "sm" })}
+              <Link href={github} target="_blank">
+                <LuGithub className="cursor-pointer w-6 h-6" />
+              </Link>
+            </Button>
+          )}
+          {deployment && (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-muted-foreground px-2 py-0"
             >
-              <ArrowUpRightIcon />
-              <span className="sr-only">Preview</span>
-            </Link>
-          </div>
+              <Link href={deployment} target="_blank">
+                <LuArrowUpRight className="cursor-pointer w-6 h-6" />
+              </Link>
+            </Button>
+          )}
         </div>
-
-        <p className="mt-[2px] text-base">{description}</p>
-      </div>
-    </div>
+      </CardHeader>
+    </Card>
   );
-}
+};
+
+export default ProjectCard;
