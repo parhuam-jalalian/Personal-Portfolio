@@ -10,11 +10,11 @@ export default defineType({
       title: "Title",
       type: "string",
       description: "Title of the Page",
-      initialValue: "Experience",
+      initialValue: "experience",
       readOnly: true,
     }),
     defineField({
-      name: "Experiences",
+      name: "experiences",
       title: "List of Experiences",
       type: "array",
       description: "List of Past Experiences",
@@ -46,6 +46,7 @@ export default defineType({
               title: "Currently Employed",
               type: "boolean",
               description: "Check if the employee is still employed",
+              initialValue: false,
             },
             {
               name: "endDate",

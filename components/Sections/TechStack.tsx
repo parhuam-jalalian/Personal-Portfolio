@@ -7,12 +7,10 @@ const TechStack = ({ tech }: { tech: ITechStackSingleItem[] }) => {
   const frontend = tech?.filter(
     (item) => item?.stack == TechStackEnum.FRONTEND
   );
-
   const backend = tech?.filter((item) => item?.stack == TechStackEnum.BACKEND);
-
   const devops = tech?.filter((item) => item?.stack == TechStackEnum.DEVOPS);
 
-  console.log("devops", devops);
+  // console.log("devops", devops);
 
   return (
     <section id="#about" className="group">

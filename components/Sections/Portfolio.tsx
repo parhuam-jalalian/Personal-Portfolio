@@ -2,7 +2,7 @@ import React from "react";
 import ProjectCard from "../Card/ProjectCard";
 
 const Portfolio = ({ projects }: { projects: any[] }) => {
-  console.log(projects);
+  // console.log(projects);
   return (
     <section id="portfolio" className="pt-14 text-muted-foreground sm:text-lg">
       <div className="group">

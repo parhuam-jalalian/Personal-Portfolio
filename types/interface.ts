@@ -8,6 +8,7 @@ export interface ICommonProps {
   _createdAt: string;
   name: string;
   image: string;
+  title: string;
 }
 
 export interface INavbarOptions {
@@ -24,7 +25,6 @@ export interface ILinksProps {
   resume: string;
 }
 export interface IHeroSectionProps extends ILinksProps {
-  title: string;
   name: string;
   mainImage: string;
   _id: string;
@@ -43,8 +43,20 @@ export interface ITechStackOptionProp extends ICommonProps {
 
 export interface IProjectData extends ICommonProps {
   mainImage: string;
-  title: string;
   description: string;
   github: string;
   deployment: string;
+}
+
+export interface IExperienceData {
+  _key: string;
+  companyName: string;
+  designation: string;
+  startDate: string;
+  currentlyEmployed: boolean;
+  endDate: string;
+}
+
+export interface IExperienceList extends ICommonProps {
+  experiences: IExperienceData[];
 }

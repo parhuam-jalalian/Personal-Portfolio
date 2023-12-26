@@ -10,6 +10,9 @@ export const dataQuery = groq`{
     ...,
     "mainImage": mainImage.asset->url
   },
+  "experience": *[_type == "experience"][0]{
+    ...,
+  },
   "projects": *[_type == "projects"]{
     ...,
     "mainImage": mainImage.asset->url
