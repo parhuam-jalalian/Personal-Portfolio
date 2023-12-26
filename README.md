@@ -16,3 +16,4 @@ Readme file work in progress. 🚀
 * [Design Inspiration -> zwel.dev](https://github.com/zwelhtetyan/zwel.dev)
 * [Component Library -> shadcn ui](https://ui.shadcn.com/)
 * [Dashboard -> Sanity](https://www.sanity.io/)
+* [Design Inspiration atiqurrahaman](https://www.atiqurrahaman.com/)

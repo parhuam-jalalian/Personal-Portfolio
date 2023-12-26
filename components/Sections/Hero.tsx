@@ -1,8 +1,6 @@
 import Image from "next/image";
-import { LuLinkedin, LuGithub, LuAtSign } from "react-icons/lu";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { IHeroSectionProps } from "@/types/interface";
+import IconsAndResume from "./IconsAndResume";
 
 const Hero = ({
   email,
@@ -23,40 +21,14 @@ const Hero = ({
           {title}
         </h2>
         <p className="text-2xl text-muted-foreground mb-3">{name}</p>
-        {/* icons */}
-        <div className="flex gap-1">
-          {github && (
-            <Link href={github} target="_blank">
-              <Button variant="ghost" size="icon">
-                <LuGithub className="h-6 w-6" />
-              </Button>
-            </Link>
-          )}
-
-          {linkedin && (
-            <Link href={linkedin} target="_blank">
-              <Button variant="ghost" size="icon">
-                <LuLinkedin className="h-6 w-6" />
-              </Button>
-            </Link>
-          )}
-
-          {email && (
-            <Link href={`mailto:${email}`} target="_blank">
-              <Button variant="ghost" size="icon">
-                <LuAtSign className="h-6 w-6" />
-              </Button>
-            </Link>
-          )}
+        <div className="hidden md:block">
+          <IconsAndResume
+            email={email}
+            github={github}
+            linkedin={linkedin}
+            resume={resume}
+          />
         </div>
-
-        {resume && (
-          <Link href={resume} target="_blank">
-            <Button variant="default" size="sm" className="mt-3">
-              View Resume
-            </Button>
-          </Link>
-        )}
       </div>
 
       {mainImage && (
@@ -68,6 +40,14 @@ const Hero = ({
           alt=""
         />
       )}
+      <div className="block md:hidden">
+        <IconsAndResume
+          email={email}
+          github={github}
+          linkedin={linkedin}
+          resume={resume}
+        />
+      </div>
     </section>
   );
 };

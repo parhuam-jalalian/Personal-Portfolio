@@ -25,9 +25,16 @@ export default defineConfig({
             S.listItem()
               .title("Tech Section")
               .child(S.document().schemaType("tech").documentId("tech")),
+            S.listItem()
+              .title("Experience Section")
+              .child(
+                S.document().schemaType("experience").documentId("experience")
+              ),
             ...S.documentTypeListItems().filter(
               (listItem) =>
-                !["hero", "about", "tech"].includes(listItem.getId() as string)
+                !["hero", "about", "tech", "experience"].includes(
+                  listItem.getId() as string
+                )
             ),
           ]);
       },

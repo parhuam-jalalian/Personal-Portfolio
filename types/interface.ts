@@ -17,15 +17,17 @@ export interface INavbarOptions {
   path: string;
 }
 
-export interface IHeroSectionProps {
-  title: string;
-  name: string;
-  mainImage: string;
-  _id: string;
+export interface ILinksProps {
   github: string;
   linkedin: string;
   email: string;
   resume: string;
+}
+export interface IHeroSectionProps extends ILinksProps {
+  title: string;
+  name: string;
+  mainImage: string;
+  _id: string;
 }
 
 export interface ITechStackSingleItem {
