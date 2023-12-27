@@ -17,3 +17,10 @@ Readme file work in progress. 🚀
 * [Component Library -> shadcn ui](https://ui.shadcn.com/)
 * [Dashboard -> Sanity](https://www.sanity.io/)
 * [Design Inspiration atiqurrahaman](https://www.atiqurrahaman.com/)
+
+## Tasks to do
+
+* prettier, husky, lint-staged, lint
+* dark / light mode add
+* finish contact page
+* add animations using aos or similar library

@@ -55,6 +55,7 @@ export interface IExperienceData {
   startDate: string;
   currentlyEmployed: boolean;
   endDate: string;
+  body: any[];
 }
 
 export interface IExperienceList extends ICommonProps {

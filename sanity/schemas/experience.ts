@@ -61,6 +61,13 @@ export default defineType({
                 };
               }) => parent.currentlyEmployed, // Hide if currentlyEmployed is checked\
             },
+            {
+              name: "body",
+              title: "Body",
+              type: "blockContent",
+              description: "Description of the work you did",
+              initialValue: "Description of the work you did",
+            },
           ],
           preview: {
             select: {

@@ -1,5 +1,6 @@
 import { IExperienceData } from "@/types/interface";
 import React from "react";
+import ReactPortableText from "../Text/ReactPortableText";
 
 const TimelineCard = ({
   _key,
@@ -8,6 +9,7 @@ const TimelineCard = ({
   designation,
   endDate,
   startDate,
+  body,
 }: IExperienceData) => {
   return (
     <li className="mb-6 ms-4">
@@ -22,15 +24,7 @@ const TimelineCard = ({
         {startDate} - {endDate ? endDate : currentlyEmployed ? "present" : ""}
       </time>
       <div className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-        <ol className="list-decimal ms-8 my-2">
-          <li>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At debitis
-            ullam, deleniti asperiores obcaecati eius quas. Dolorum,
-            repudiandae?
-          </li>
-          <li>xyz responsibility</li>
-          <li>played leadership role</li>
-        </ol>
+        <ReactPortableText body={body} />
       </div>
     </li>
   );
