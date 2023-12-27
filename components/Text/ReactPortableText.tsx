@@ -28,7 +28,7 @@ const ReactPortableText = ({ body }: any) => {
         }}
       >
         <Image
-          src={imageUrl}
+          src={imageUrl as any}
           alt={value.alt || " "}
           width={width}
           height={height}
