@@ -25,6 +25,7 @@ export interface ILinksProps {
   resume: string;
 }
 export interface IHeroSectionProps extends ILinksProps {
+  title: string;
   name: string;
   mainImage: string;
   _id: string;
