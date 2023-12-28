@@ -30,7 +30,7 @@ const ProjectCard: React.FC<IProject> = ({
       />
       <CardHeader className="px-4 py-2 flex flex-col h-[130px] justify-between">
         <div className="">
-          <CardTitle className="text-md">{title}</CardTitle>
+          <CardTitle className="text-md">{textLimit(title, 30)}</CardTitle>
           <CardDescription>{textLimit(description, 70)}</CardDescription>
         </div>
         <div className="">

@@ -5,5 +5,3 @@ export const textLimit = (text: string, limit: number) => {
     return text;
   }
 };
-
-export const titleLimit = () => {};
