@@ -10,6 +10,7 @@ import { IProject } from "@/types/interface";
 import Image from "next/image";
 import { LuGithub, LuArrowUpRight } from "react-icons/lu";
 import Link from "next/link";
+import { textLimit } from "../Text/TextEdit";
 
 const ProjectCard: React.FC<IProject> = ({
   deployment,
@@ -25,11 +26,13 @@ const ProjectCard: React.FC<IProject> = ({
         alt="alt text"
         width={400}
         height={400}
-        className="w-full h-[200px] object-cover rounded-t-md"
+        className="w-full h-[220px] object-cover rounded-t-md"
       />
-      <CardHeader className="px-4 py-2">
-        <CardTitle className="text-md">{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+      <CardHeader className="px-4 py-2 flex flex-col h-[130px] justify-between">
+        <div className="">
+          <CardTitle className="text-md">{title}</CardTitle>
+          <CardDescription>{textLimit(description, 70)}</CardDescription>
+        </div>
         <div className="">
           {github && (
             <Link href={github} target="_blank">

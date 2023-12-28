@@ -22,13 +22,13 @@ Readme file work in progress. 🚀
 ## Tasks to do
 
 * prettier, husky, lint-staged, lint
-* dark / light mode add
+* ✅ dark / light mode add
 * finish contact page
 * add animations using aos or similar library
 
 ## features request
 
-* use array of objects inside featured projects
+* ✅ use array of objects inside featured projects
 * animations
 * array of objects inside the contact page, along with a dropdown list for social media icons
 * [optional] make the tech stack icons on the center of the page
