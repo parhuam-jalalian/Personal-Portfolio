@@ -6,12 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { IProjectData } from "@/types/interface";
+import { IProject } from "@/types/interface";
 import Image from "next/image";
 import { LuGithub, LuArrowUpRight } from "react-icons/lu";
 import Link from "next/link";
 
-const ProjectCard: React.FC<IProjectData> = ({
+const ProjectCard: React.FC<IProject> = ({
   deployment,
   description,
   github,

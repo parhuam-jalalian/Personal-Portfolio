@@ -32,3 +32,4 @@ Readme file work in progress. 🚀
 * animations
 * array of objects inside the contact page, along with a dropdown list for social media icons
 * [optional] make the tech stack icons on the center of the page
+* make the tech section just like authors section. put out a list of popular technologies and the user should be able to pick and drop

@@ -13,7 +13,7 @@ import {
   IAboutSection,
   IExperienceList,
   IHeroSectionProps,
-  IProjectData,
+  IProjectList,
   ITechStackOptionProp,
 } from "@/types/interface";
 
@@ -21,7 +21,7 @@ interface IDataProps {
   heroSection: IHeroSectionProps;
   aboutSection: IAboutSection;
   techSection: ITechStackOptionProp;
-  projects: IProjectData[];
+  projects: IProjectList;
   experience: IExperienceList;
   contact: any;
 }
@@ -30,7 +30,7 @@ const page = async () => {
   const data: IDataProps = await sanityClientFetch({
     query: dataQuery,
   });
-  console.log("contact", data?.contact);
+  console.log("Projects", data?.projects);
   return (
     <>
       <Navbar />
@@ -39,7 +39,7 @@ const page = async () => {
         <About about={data?.aboutSection} />
         <TechStack tech={data?.techSection?.technologies} />
         <Experience data={data?.experience?.experiences} />
-        <Portfolio projects={data?.projects} />
+        <Portfolio projects={data?.projects?.projects} />
         <Contact />
       </main>
     </>

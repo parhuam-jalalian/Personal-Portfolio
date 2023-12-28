@@ -31,13 +31,23 @@ export default defineConfig({
                 S.document().schemaType("experience").documentId("experience")
               ),
             S.listItem()
+              .title("Featured Projects")
+              .child(
+                S.document().schemaType("projects").documentId("projects")
+              ),
+            S.listItem()
               .title("Contact Section")
               .child(S.document().schemaType("contact").documentId("contact")),
             ...S.documentTypeListItems().filter(
               (listItem) =>
-                !["hero", "about", "tech", "experience", "contact"].includes(
-                  listItem.getId() as string
-                )
+                ![
+                  "hero",
+                  "about",
+                  "tech",
+                  "experience",
+                  "projects",
+                  "contact",
+                ].includes(listItem.getId() as string)
             ),
           ]);
       },
@@ -45,8 +55,3 @@ export default defineConfig({
     visionTool({ defaultApiVersion: apiVersion }),
   ],
 });
-
-// https://www.linkedin.com/in/joyshaheb/
-// khondokoralam@gmail.com
-// https://github.com/JoyShaheb
-// Senior Frontend Developer
