@@ -18,6 +18,10 @@ export interface INavbarOptions {
   path: string;
 }
 
+export interface IAboutSection extends ICommonProps {
+  body: any[];
+}
+
 export interface ILinksProps {
   github: string;
   linkedin: string;

@@ -3,7 +3,6 @@ import TimelineCard from "../Card/TimelineCard";
 import { IExperienceData } from "@/types/interface";
 
 const Experience = ({ data }: { data: IExperienceData[] }) => {
-  console.log("experience", data);
   return (
     <section id="experience" className="pt-16 text-muted-foreground sm:text-lg">
       <div className="group">

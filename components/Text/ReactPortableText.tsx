@@ -76,7 +76,6 @@ const ReactPortableText = ({ body }: any) => {
 
   // Custom link component
   const CustomLink = ({ text, value, ...x }: any) => {
-    // console.log("href", x);
     return (
       <a
         href={value?.href || "#"}

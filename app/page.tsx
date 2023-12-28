@@ -10,24 +10,27 @@ import {
 import { sanityClientFetch } from "@/sanity/lib/client";
 import { dataQuery } from "@/sanity/query/queries";
 import {
+  IAboutSection,
   IExperienceList,
   IHeroSectionProps,
+  IProjectData,
   ITechStackOptionProp,
 } from "@/types/interface";
 
 interface IDataProps {
   heroSection: IHeroSectionProps;
-  aboutSection: any[];
+  aboutSection: IAboutSection;
   techSection: ITechStackOptionProp;
-  projects: any[];
+  projects: IProjectData[];
   experience: IExperienceList;
+  contact: any;
 }
 
 const page = async () => {
   const data: IDataProps = await sanityClientFetch({
     query: dataQuery,
   });
-  // console.log("experience", data?.experience);
+  console.log("contact", data?.contact);
   return (
     <>
       <Navbar />

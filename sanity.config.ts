@@ -30,9 +30,12 @@ export default defineConfig({
               .child(
                 S.document().schemaType("experience").documentId("experience")
               ),
+            S.listItem()
+              .title("Contact Section")
+              .child(S.document().schemaType("contact").documentId("contact")),
             ...S.documentTypeListItems().filter(
               (listItem) =>
-                !["hero", "about", "tech", "experience"].includes(
+                !["hero", "about", "tech", "experience", "contact"].includes(
                   listItem.getId() as string
                 )
             ),

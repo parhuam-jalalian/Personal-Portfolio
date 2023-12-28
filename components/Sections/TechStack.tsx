@@ -10,8 +10,6 @@ const TechStack = ({ tech }: { tech: ITechStackSingleItem[] }) => {
   const backend = tech?.filter((item) => item?.stack == TechStackEnum.BACKEND);
   const devops = tech?.filter((item) => item?.stack == TechStackEnum.DEVOPS);
 
-  // console.log("devops", devops);
-
   return (
     <section id="#about" className="group">
       <h1 className="title-bottom-line mt-14 cursor-pointer text-2xl">
