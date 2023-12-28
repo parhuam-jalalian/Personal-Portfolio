@@ -32,26 +32,26 @@ const ProjectCard: React.FC<IProjectData> = ({
         <CardDescription>{description}</CardDescription>
         <div className="">
           {github && (
-            <Button
-              variant="ghost"
-              size="sm"
-              className="text-muted-foreground px-2 py-0"
-            >
-              <Link href={github} target="_blank">
+            <Link href={github} target="_blank">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-muted-foreground px-2 py-0"
+              >
                 <LuGithub className="cursor-pointer w-6 h-6" />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           )}
           {deployment && (
-            <Button
-              variant="ghost"
-              size="sm"
-              className="text-muted-foreground px-2 py-0"
-            >
-              <Link href={deployment} target="_blank">
+            <Link href={deployment} target="_blank">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-muted-foreground px-2 py-0"
+              >
                 <LuArrowUpRight className="cursor-pointer w-6 h-6" />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           )}
         </div>
       </CardHeader>

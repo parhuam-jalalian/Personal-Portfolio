@@ -3,3 +3,8 @@ export enum TechStackEnum {
   BACKEND = "backend",
   DEVOPS = "devops",
 }
+
+export enum ThemeTypesEnum {
+  DARK = "dark",
+  LIGHT = "light",
+}
