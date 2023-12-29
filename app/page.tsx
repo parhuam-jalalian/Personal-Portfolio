@@ -30,7 +30,7 @@ const page = async () => {
   const data: IDataProps = await sanityClientFetch({
     query: dataQuery,
   });
-  console.log("Projects", data?.projects);
+  console.log("xxxxx", data?.techSection);
   return (
     <>
       <Navbar />

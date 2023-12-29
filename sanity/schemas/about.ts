@@ -11,6 +11,7 @@ export default defineType({
       type: "string",
       description: "Don't change this value, it's used for internal purposes.",
       initialValue: "About Section",
+      readOnly: true,
     }),
     defineField({
       name: "body",

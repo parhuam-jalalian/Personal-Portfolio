@@ -25,6 +25,7 @@ Readme file work in progress. 🚀
 * ✅ dark / light mode add
 * finish contact page
 * add animations using aos or similar library
+* add a br tag for the block content
 
 ## features request
 
