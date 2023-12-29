@@ -11,7 +11,7 @@ import {
 } from "react-icons/lu";
 import { Button } from "../ui/button";
 
-const IconsRenderer = ({
+const HeroSectionIcons = ({
   linkType,
   link,
 }: {
@@ -70,4 +70,4 @@ const IconsRenderer = ({
   );
 };
 
-export default IconsRenderer;
+export default HeroSectionIcons;

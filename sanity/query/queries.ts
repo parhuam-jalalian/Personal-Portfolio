@@ -25,7 +25,9 @@ export const dataQuery = groq`{
   },
   "contact": *[_type == "contact"][0]{
     ...,
-    "mainImage": mainImage.asset->url
+    socialLinks[]-> {
+      ...
+    }
   },
   "techSection": *[_type == "tech"][0]{
     ...,

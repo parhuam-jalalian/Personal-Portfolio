@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { ISocialLinks } from "@/types/interface";
-import IconsRenderer from "./IconsRenderer";
+import HeroSectionIcons from "../Icons/HeroSectionIcons";
 
 const IconsAndResume = ({
   socialLinks,
@@ -15,7 +15,7 @@ const IconsAndResume = ({
     <div className="flex flex-col justify-center items-center md:items-start">
       <div className="flex gap-1">
         {socialLinks?.map((item: ISocialLinks) => (
-          <IconsRenderer key={item?._id} {...item} />
+          <HeroSectionIcons key={item?._id} {...item} />
         ))}
       </div>
 

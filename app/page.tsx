@@ -11,6 +11,7 @@ import { sanityClientFetch } from "@/sanity/lib/client";
 import { dataQuery } from "@/sanity/query/queries";
 import {
   IAboutSection,
+  IContact,
   IExperienceList,
   IHeroSectionProps,
   IProjectList,
@@ -23,14 +24,14 @@ interface IDataProps {
   techSection: ITechStackOptionProp;
   projects: IProjectList;
   experience: IExperienceList;
-  contact: any;
+  contact: IContact;
 }
 
 const page = async () => {
   const data: IDataProps = await sanityClientFetch({
     query: dataQuery,
   });
-  console.log("xxxxx", data?.heroSection);
+  console.log("xxxxx", data?.contact);
   return (
     <>
       <Navbar />
@@ -40,7 +41,7 @@ const page = async () => {
         <TechStack tech={data?.techSection?.technologies} />
         <Experience data={data?.experience?.experiences} />
         <Portfolio projects={data?.projects?.projects} />
-        <Contact />
+        <Contact data={data?.contact} />
       </main>
     </>
   );

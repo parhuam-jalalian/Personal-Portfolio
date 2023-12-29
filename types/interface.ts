@@ -70,3 +70,8 @@ export interface IExperienceData {
 export interface IExperienceList extends ICommonProps {
   experiences: IExperienceData[];
 }
+
+export interface IContact extends ICommonProps {
+  copyright: string;
+  socialLinks: ISocialLinks[];
+}

@@ -22,81 +22,12 @@ export default defineType({
     }),
 
     defineField({
-      name: "links",
-      title: "List of links",
+      name: "socialLinks",
+      title: "List of Social Media Links",
       type: "array",
-      description: "List of links to social media and other sites",
+      description: "Choose List of Social Media Links you want to display",
       // @ts-ignore
-      of: [
-        {
-          type: "object",
-          fields: [
-            {
-              //  use a select field here
-              name: "socialMediaName",
-              title: "Social Media Name",
-              type: "string",
-              description: "The name of the company you worked for",
-            },
-            {
-              name: "designation",
-              title: "Designation",
-              type: "string",
-              description: "The position you held in the company",
-            },
-            {
-              name: "startDate",
-              title: "Start Date",
-              type: "date",
-              description: "Start date of employment",
-            },
-            {
-              name: "currentlyEmployed",
-              title: "Currently Employed",
-              type: "boolean",
-              description: "Check if the employee is still employed",
-              initialValue: false,
-            },
-            {
-              name: "endDate",
-              title: "End Date",
-              type: "date",
-              description: "End date of employment",
-              hidden: ({
-                parent,
-              }: {
-                parent: {
-                  currentlyEmployed: boolean;
-                };
-              }) => parent.currentlyEmployed, // Hide if currentlyEmployed is checked\
-            },
-            {
-              name: "body",
-              title: "Body",
-              type: "blockContent",
-              description: "Description of the work you did",
-              initialValue: "Description of the work you did",
-            },
-          ],
-          preview: {
-            select: {
-              title: "companyName",
-              designation: "designation",
-              time: "startDate",
-              endTime: "endDate",
-            },
-            prepare(selection: any) {
-              const { title, designation, time, endTime } = selection;
-              return {
-                title: title,
-                subtitle: `${designation} - ${time} - ${
-                  endTime ? endTime : "Present"
-                }`,
-              };
-            },
-          },
-        },
-      ],
+      of: [{ type: "reference", to: { type: "socialLinks" } }],
     }),
   ],
 });
