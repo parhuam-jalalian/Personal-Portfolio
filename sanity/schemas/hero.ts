@@ -58,5 +58,13 @@ export default defineType({
       type: "string",
       description: "Add your email here",
     }),
+    defineField({
+      name: "socialLinks",
+      title: "List of Social Media Links",
+      type: "array",
+      description: "Choose List of Social Media Links you want to display",
+      // @ts-ignore
+      of: [{ type: "reference", to: { type: "socialLinks" } }],
+    }),
   ],
 });

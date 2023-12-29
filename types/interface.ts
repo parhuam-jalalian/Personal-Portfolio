@@ -22,17 +22,16 @@ export interface IAboutSection extends ICommonProps {
   body: any[];
 }
 
-export interface ILinksProps {
-  github: string;
-  linkedin: string;
-  email: string;
-  resume: string;
+export interface ISocialLinks extends ICommonProps {
+  handle: string;
+  linkType: string;
+  link: string;
 }
-export interface IHeroSectionProps extends ILinksProps {
-  title: string;
-  name: string;
+
+export interface IHeroSectionProps extends ICommonProps {
   mainImage: string;
-  _id: string;
+  resume: string;
+  socialLinks: ISocialLinks[];
 }
 
 export interface ITechStackSingleItem extends ICommonProps {

@@ -4,7 +4,10 @@ export const dataQuery = groq`{
   "heroSection": *[_type == "hero"][0]{
     ...,
     "mainImage": mainImage.asset->url,
-    "resume": resume.asset->url
+    "resume": resume.asset->url,
+    socialLinks[]-> {
+      ...
+    }
   },
   "aboutSection": *[_type == "about"][0]{
     ...,

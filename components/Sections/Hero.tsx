@@ -3,9 +3,7 @@ import { IHeroSectionProps } from "@/types/interface";
 import IconsAndResume from "./IconsAndResume";
 
 const Hero = ({
-  email,
-  github,
-  linkedin,
+  socialLinks,
   mainImage,
   name,
   title,
@@ -22,12 +20,7 @@ const Hero = ({
         </h2>
         <p className="text-2xl text-muted-foreground mb-3">{name}</p>
         <div className="hidden md:block">
-          <IconsAndResume
-            email={email}
-            github={github}
-            linkedin={linkedin}
-            resume={resume}
-          />
+          <IconsAndResume socialLinks={socialLinks} resume={resume} />
         </div>
       </div>
 
@@ -41,12 +34,7 @@ const Hero = ({
         />
       )}
       <div className="block md:hidden">
-        <IconsAndResume
-          email={email}
-          github={github}
-          linkedin={linkedin}
-          resume={resume}
-        />
+        <IconsAndResume socialLinks={socialLinks} resume={resume} />
       </div>
     </section>
   );
