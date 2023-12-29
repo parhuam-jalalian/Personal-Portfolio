@@ -143,7 +143,7 @@ const ReactPortableText = ({ body }: any) => {
         types: {
           image: SampleImageComponent,
           table: TableBlock,
-          lineBreak: () => <br />,
+          lineBreak: () => <div className="my-3"></div>,
         },
       }}
     />

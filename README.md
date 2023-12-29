@@ -26,7 +26,9 @@ Readme file work in progress. 🚀
 * ✅ make the tech section just like authors section. put out a list of popular technologies and the user should be able to pick and drop
 * ✅ dark / light mode add
 * ✅ finish contact page
-* add a br tag for the block content
+* ✅ add a br tag for the block content
+* should be able to sort tech by frontend/backend/devops using a dropdown on sanity dashboard filter option
 * add animations using aos or similar library
+* [optional] add SSR feature
 * [optional] prettier, husky, lint-staged, lint
 * [optional] make the tech stack icons on the center of the page
