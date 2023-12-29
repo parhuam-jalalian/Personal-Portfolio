@@ -22,7 +22,7 @@ const TechStack = ({ tech }: { tech: ITechStackSingleItem[] }) => {
           <div className="flex flex-wrap gap-2">
             {frontend.map((item: ITechStackSingleItem) => (
               <TooltipComponent
-                key={item?._key}
+                key={item?._id}
                 label={item?.label}
                 item={
                   <Image
@@ -45,7 +45,7 @@ const TechStack = ({ tech }: { tech: ITechStackSingleItem[] }) => {
           <div className="flex flex-wrap gap-2">
             {backend.map((item: ITechStackSingleItem) => (
               <TooltipComponent
-                key={item?._key}
+                key={item?._id}
                 label={item?.label}
                 item={
                   <Image
@@ -67,7 +67,7 @@ const TechStack = ({ tech }: { tech: ITechStackSingleItem[] }) => {
           <div className="flex flex-wrap gap-2">
             {devops.map((item: ITechStackSingleItem) => (
               <TooltipComponent
-                key={item?._key}
+                key={item?._id}
                 label={item?.label}
                 item={
                   <Image

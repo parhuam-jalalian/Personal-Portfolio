@@ -26,7 +26,7 @@ export const dataQuery = groq`{
   },
   "techSection": *[_type == "tech"][0]{
     ...,
-    technologies[] {
+    technologies[] -> {
       ...,
       "icon": icon.asset->url
     }  

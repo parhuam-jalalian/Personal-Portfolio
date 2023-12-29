@@ -35,11 +35,10 @@ export interface IHeroSectionProps extends ILinksProps {
   _id: string;
 }
 
-export interface ITechStackSingleItem {
+export interface ITechStackSingleItem extends ICommonProps {
   stack: TechStackEnum.FRONTEND | TechStackEnum.BACKEND | TechStackEnum.DEVOPS;
   icon: string;
   label: string;
-  _key: string;
 }
 
 export interface ITechStackOptionProp extends ICommonProps {
