@@ -1,4 +1,5 @@
 import { defineField, defineType } from "sanity";
+import { ITechnologyReferenceDocument } from "@/types/interface";
 
 export default defineType({
   name: "tech",
@@ -19,7 +20,31 @@ export default defineType({
       type: "array",
       description: "Choose List of technologies you want to display",
       // @ts-ignore
-      of: [{ type: "reference", to: { type: "technologyOptions" } }],
+      of: [
+        {
+          type: "reference",
+          to: { type: "technologyOptions" },
+          validation: (Rule: any) => Rule.unique(),
+          options: {
+            filter: ({
+              document,
+            }: {
+              document: ITechnologyReferenceDocument;
+            }) => {
+              // console.log("documents list", document);
+              const existingProjects = document.technologies
+                .map((project) => project._ref)
+                .filter(Boolean);
+              return {
+                filter: "!(_id in $existingProjects)",
+                params: {
+                  existingProjects,
+                },
+              };
+            },
+          },
+        },
+      ],
     }),
   ],
 });

@@ -75,3 +75,19 @@ export interface IContact extends ICommonProps {
   copyright: string;
   socialLinks: ISocialLinks[];
 }
+
+export interface ITechnologyReferenceDocument extends ICommonProps {
+  technologies: {
+    _ref: string;
+    _key: string;
+    _type: "reference";
+  }[];
+}
+
+export interface ISocialLinksReferenceDocument extends ICommonProps {
+  socialLinks: {
+    _ref: string;
+    _key: string;
+    _type: "reference";
+  }[];
+}

@@ -1,3 +1,4 @@
+import { ISocialLinksReferenceDocument } from "@/types/interface";
 import { defineField, defineType } from "sanity";
 
 export default defineType({
@@ -41,30 +42,36 @@ export default defineType({
       ],
     }),
     defineField({
-      name: "github",
-      title: "GitHub Link",
-      type: "string",
-      description: "Add your GitHub link here",
-    }),
-    defineField({
-      name: "linkedin",
-      title: "LinkedIn Link",
-      type: "string",
-      description: "Add your LinkedIn link here",
-    }),
-    defineField({
-      name: "email",
-      title: "Email",
-      type: "string",
-      description: "Add your email here",
-    }),
-    defineField({
       name: "socialLinks",
       title: "List of Social Media Links",
       type: "array",
       description: "Choose List of Social Media Links you want to display",
       // @ts-ignore
-      of: [{ type: "reference", to: { type: "socialLinks" } }],
+      of: [
+        {
+          type: "reference",
+          to: { type: "socialLinks" },
+          validation: (Rule: any) => Rule.unique(),
+          options: {
+            filter: ({
+              document,
+            }: {
+              document: ISocialLinksReferenceDocument;
+            }) => {
+              // console.log("documents list", document);
+              const existingProjects = document.socialLinks
+                .map((project) => project._ref)
+                .filter(Boolean);
+              return {
+                filter: "!(_id in $existingProjects)",
+                params: {
+                  existingProjects,
+                },
+              };
+            },
+          },
+        },
+      ],
     }),
   ],
 });
