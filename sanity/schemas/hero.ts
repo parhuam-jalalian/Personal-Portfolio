@@ -46,12 +46,12 @@ export default defineType({
       title: "List of Social Media Links",
       type: "array",
       description: "Choose List of Social Media Links you want to display",
+      validation: (Rule) => Rule.unique().error("Each Link must be unique"),
       // @ts-ignore
       of: [
         {
           type: "reference",
           to: { type: "socialLinks" },
-          validation: (Rule: any) => Rule.unique(),
           options: {
             filter: ({
               document,

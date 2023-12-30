@@ -19,19 +19,19 @@ export default defineType({
       title: "Technologies",
       type: "array",
       description: "Choose List of technologies you want to display",
+      validation: (Rule) =>
+        Rule.unique().error("Each technology must be unique"),
       // @ts-ignore
       of: [
         {
           type: "reference",
           to: { type: "technologyOptions" },
-          validation: (Rule: any) => Rule.unique(),
           options: {
             filter: ({
               document,
             }: {
               document: ITechnologyReferenceDocument;
             }) => {
-              // console.log("documents list", document);
               const existingProjects = document.technologies
                 .map((project) => project._ref)
                 .filter(Boolean);
