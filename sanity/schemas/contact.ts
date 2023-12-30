@@ -1,3 +1,4 @@
+import { ISocialLinksReferenceDocument } from "@/types/interface";
 import { defineField, defineType } from "sanity";
 
 export default defineType({
@@ -26,8 +27,32 @@ export default defineType({
       title: "List of Social Media Links",
       type: "array",
       description: "Choose List of Social Media Links you want to display",
+      validation: (Rule) => Rule.unique().error("Each Link must be unique"),
       // @ts-ignore
-      of: [{ type: "reference", to: { type: "socialLinks" } }],
+      of: [
+        {
+          type: "reference",
+          to: { type: "socialLinks" },
+          options: {
+            filter: ({
+              document,
+            }: {
+              document: ISocialLinksReferenceDocument;
+            }) => {
+              // console.log("documents list", document);
+              const existingProjects = document.socialLinks
+                .map((project) => project._ref)
+                .filter(Boolean);
+              return {
+                filter: "!(_id in $existingProjects)",
+                params: {
+                  existingProjects,
+                },
+              };
+            },
+          },
+        },
+      ],
     }),
   ],
 });
