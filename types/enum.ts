@@ -1,7 +1,6 @@
 export enum TechStackEnum {
   FRONTEND = "frontend",
   BACKEND = "backend",
-  DEVOPS = "devops",
   MACHINE = "machine",
   CLOUDDEV = "cloudDev",
   TESTING = "testing",
